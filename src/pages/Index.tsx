@@ -1,8 +1,9 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
-import { Trophy, Zap, Clock, Users } from "lucide-react";
+import { Trophy, Zap, Clock, Users, Heart } from "lucide-react";
 import CreateChallengeModal from "@/components/CreateChallengeModal";
 import ActiveChallenges from "@/components/ActiveChallenges";
 import Leaderboard from "@/components/Leaderboard";
@@ -41,6 +42,12 @@ const Index = () => {
               <Users className="h-4 w-4" />
               Join Demo Duel
             </Button>
+            <Link to="/wellbeing">
+              <Button size="lg" variant="secondary" className="gap-2">
+                <Heart className="h-4 w-4" />
+                Student Well-being
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
